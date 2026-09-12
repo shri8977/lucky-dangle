@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 260" width="220" height="260">
+  <defs>
+    <radialGradient id="medallionGold" cx="50%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#f6dfa0"/>
+      <stop offset="55%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#9c7a1f"/>
+    </radialGradient>
+    <radialGradient id="medallionCore" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#8a1c30"/>
+      <stop offset="100%" stop-color="#5c0f1f"/>
+    </radialGradient>
+    <linearGradient id="velShaft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b98a2e"/>
+      <stop offset="50%" stop-color="#f6dfa0"/>
+      <stop offset="100%" stop-color="#b98a2e"/>
+    </linearGradient>
+    <linearGradient id="velBlade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff6de"/>
+      <stop offset="100%" stop-color="#d4af37"/>
+    </linearGradient>
+    <linearGradient id="feather" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f7a68"/>
+      <stop offset="100%" stop-color="#0b4a3f"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Peacock-feather fan behind the medallion (abstract, non-figurative) -->
+  <g opacity="0.9">
+    <ellipse cx="70"  cy="95" rx="10" ry="34" fill="url(#feather)" transform="rotate(-28 70 95)"/>
+    <ellipse cx="110" cy="82" rx="10" ry="38" fill="url(#feather)"/>
+    <ellipse cx="150" cy="95" rx="10" ry="34" fill="url(#feather)" transform="rotate(28 150 95)"/>
+    <circle cx="70" cy="80" r="4" fill="#f6dfa0"/>
+    <circle cx="110" cy="64" r="4" fill="#f6dfa0"/>
+    <circle cx="150" cy="80" r="4" fill="#f6dfa0"/>
+  </g>
+
+  <!-- Medallion -->
+  <circle cx="110" cy="110" r="62" fill="url(#medallionGold)" stroke="#7a5a12" stroke-width="1.5"/>
+  <circle cx="110" cy="110" r="52" fill="url(#medallionCore)"/>
+  <circle cx="110" cy="110" r="62" fill="none" stroke="#fff3d1" stroke-width="1" opacity="0.5"/>
+
+  <!-- Dot border pattern -->
+  <g fill="#f6dfa0">
+    <circle cx="110" cy="52" r="2.4"/>
+    <circle cx="145" cy="63" r="2.4"/>
+    <circle cx="166" cy="94" r="2.4"/>
+    <circle cx="166" cy="127" r="2.4"/>
+    <circle cx="145" cy="158" r="2.4"/>
+    <circle cx="110" cy="169" r="2.4"/>
+    <circle cx="75"  cy="158" r="2.4"/>
+    <circle cx="54"  cy="127" r="2.4"/>
+    <circle cx="54"  cy="94"  r="2.4"/>
+    <circle cx="75"  cy="63"  r="2.4"/>
+  </g>
+
+  <!-- The Vel (sacred spear) -->
+  <g filter="url(#softGlow)">
+    <rect x="106" y="98" width="8" height="66" rx="3" fill="url(#velShaft)"/>
+    <polygon points="110,58 128,100 110,112 92,100" fill="url(#velBlade)" stroke="#9c7a1f" stroke-width="1"/>
+    <polygon points="110,66 121,98 110,106 99,98" fill="#fff8e6" opacity="0.6"/>
+    <!-- small side prongs -->
+    <path d="M110,100 C100,104 92,104 88,98" stroke="#f6dfa0" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M110,100 C120,104 128,104 132,98" stroke="#f6dfa0" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Small lotus base under the vel -->
+  <g transform="translate(110,166)">
+    <path d="M-18,0 C-14,-10 -4,-10 0,-2 C4,-10 14,-10 18,0 C10,6 -10,6 -18,0 Z" fill="#f6dfa0" stroke="#9c7a1f" stroke-width="0.8"/>
+  </g>
+
+  <!-- Chain link / hanging ring at top of medallion -->
+  <circle cx="110" cy="46" r="6" fill="none" stroke="#f6dfa0" stroke-width="3"/>
+
+  <!-- Hanging tassel bells -->
+  <g>
+    <line x1="80" y1="170" x2="72" y2="210" stroke="#b98a2e" stroke-width="2"/>
+    <circle cx="72" cy="216" r="6" fill="url(#medallionGold)" stroke="#7a5a12" stroke-width="1"/>
+    <line x1="110" y1="172" x2="110" y2="220" stroke="#b98a2e" stroke-width="2"/>
+    <circle cx="110" cy="226" r="7" fill="url(#medallionGold)" stroke="#7a5a12" stroke-width="1"/>
+    <line x1="140" y1="170" x2="148" y2="210" stroke="#b98a2e" stroke-width="2"/>
+    <circle cx="148" cy="216" r="6" fill="url(#medallionGold)" stroke="#7a5a12" stroke-width="1"/>
+  </g>
+</svg>

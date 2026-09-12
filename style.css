@@ -1,0 +1,82 @@
+/* style.css
+   Everything in this window is transparent except the dangle itself.
+   Keep this file lightweight — it runs continuously on the desktop. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+}
+
+#stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* the empty stage never blocks clicks */
+}
+
+/* The anchor is the point that slides left/right when dragging.
+   It sits at x = xPercent% of the window width, y = 0 (top of screen). */
+#anchor {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+/* Chain stretches from the very top edge of the screen down to the charm. */
+#chain {
+  width: 2px;
+  height: 46px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 243, 209, 0.95),
+    rgba(212, 175, 55, 0.85)
+  );
+  box-shadow: 0 0 4px rgba(212, 175, 55, 0.5);
+  pointer-events: auto;
+  cursor: grab;
+}
+
+#chain.dragging {
+  cursor: grabbing;
+}
+
+/* #pivot is the rotation origin for the swing animation — the charm
+   swings around the point where the chain meets it. */
+#pivot {
+  transform-origin: top center;
+  will-change: transform;
+}
+
+#charm-art {
+  width: 130px;
+  height: auto;
+  display: block;
+  transform: perspective(500px) rotateX(4deg) translateZ(8px);
+  transform-style: preserve-3d;
+  filter:
+    drop-shadow(2px 2px 0 rgba(117, 72, 16, 0.45))
+    drop-shadow(0 7px 5px rgba(0, 0, 0, 0.28))
+    drop-shadow(0 12px 14px rgba(0, 0, 0, 0.24));
+  pointer-events: auto;
+  cursor: grab;
+}
+
+#charm-art.dragging {
+  cursor: grabbing;
+}

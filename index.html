@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lucky Dangle</title>
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- #stage spans the full transparent window. #anchor is the point
+       that moves left/right when the user drags the dangle; everything
+       visual (chain + charm) hangs from it. -->
+  <div id="stage">
+    <div id="anchor">
+      <div id="chain" class="draggable"></div>
+      <div id="pivot">
+        <img id="charm-art" class="draggable" src="assets/charms/murugan.svg" alt="Devotional charm" draggable="false" />
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

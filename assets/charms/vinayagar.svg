@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 260" width="220" height="260">
+  <defs>
+    <radialGradient id="medallionGoldV" cx="50%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#f6dfa0"/>
+      <stop offset="55%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#9c7a1f"/>
+    </radialGradient>
+    <radialGradient id="medallionCoreV" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#c1552c"/>
+      <stop offset="100%" stop-color="#8a3418"/>
+    </radialGradient>
+    <linearGradient id="earGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6dfa0"/>
+      <stop offset="100%" stop-color="#c79a3c"/>
+    </linearGradient>
+    <linearGradient id="faceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff3d1"/>
+      <stop offset="100%" stop-color="#e7c672"/>
+    </linearGradient>
+    <filter id="softGlowV" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Medallion -->
+  <circle cx="110" cy="110" r="62" fill="url(#medallionGoldV)" stroke="#7a5a12" stroke-width="1.5"/>
+  <circle cx="110" cy="110" r="52" fill="url(#medallionCoreV)"/>
+  <circle cx="110" cy="110" r="62" fill="none" stroke="#fff3d1" stroke-width="1" opacity="0.5"/>
+
+  <!-- Dot border pattern -->
+  <g fill="#f6dfa0">
+    <circle cx="110" cy="52" r="2.4"/>
+    <circle cx="145" cy="63" r="2.4"/>
+    <circle cx="166" cy="94" r="2.4"/>
+    <circle cx="166" cy="127" r="2.4"/>
+    <circle cx="145" cy="158" r="2.4"/>
+    <circle cx="110" cy="169" r="2.4"/>
+    <circle cx="75"  cy="158" r="2.4"/>
+    <circle cx="54"  cy="127" r="2.4"/>
+    <circle cx="54"  cy="94"  r="2.4"/>
+    <circle cx="75"  cy="63"  r="2.4"/>
+  </g>
+
+  <!-- Stylized elephant-head silhouette (abstract, iconographic — not literal/anatomical) -->
+  <g filter="url(#softGlowV)">
+    <!-- ears -->
+    <ellipse cx="80"  cy="102" rx="20" ry="26" fill="url(#earGrad)" stroke="#9c7a1f" stroke-width="1" transform="rotate(-12 80 102)"/>
+    <ellipse cx="140" cy="102" rx="20" ry="26" fill="url(#earGrad)" stroke="#9c7a1f" stroke-width="1" transform="rotate(12 140 102)"/>
+
+    <!-- crown arc -->
+    <path d="M92,72 C100,60 120,60 128,72" stroke="#f6dfa0" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="110" cy="60" r="3.4" fill="#fff3d1"/>
+
+    <!-- head -->
+    <ellipse cx="110" cy="104" rx="26" ry="24" fill="url(#faceGrad)" stroke="#9c7a1f" stroke-width="1"/>
+
+    <!-- eyes -->
+    <ellipse cx="101" cy="98" rx="3" ry="4" fill="#5c3a12"/>
+    <ellipse cx="119" cy="98" rx="3" ry="4" fill="#5c3a12"/>
+
+    <!-- tusk -->
+    <path d="M124,116 C130,120 132,126 128,132" stroke="#fff8e6" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <!-- trunk, gently curved -->
+    <path d="M104,116 C100,130 96,140 104,150 C110,158 108,164 100,166"
+          stroke="url(#faceGrad)" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <path d="M104,116 C100,130 96,140 104,150 C110,158 108,164 100,166"
+          stroke="#9c7a1f" stroke-width="14.6" fill="none" stroke-linecap="round" opacity="0.18"/>
+  </g>
+
+  <!-- Small modak (sweet offering) accent -->
+  <g transform="translate(148,150)">
+    <path d="M0,10 C-10,10 -12,-4 0,-8 C12,-4 10,10 0,10 Z" fill="#f6dfa0" stroke="#9c7a1f" stroke-width="0.8"/>
+    <path d="M-3,-8 C-1,-12 3,-12 4,-8" stroke="#9c7a1f" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- Small lotus base -->
+  <g transform="translate(110,166)">
+    <path d="M-18,0 C-14,-10 -4,-10 0,-2 C4,-10 14,-10 18,0 C10,6 -10,6 -18,0 Z" fill="#f6dfa0" stroke="#9c7a1f" stroke-width="0.8"/>
+  </g>
+
+  <!-- Chain link / hanging ring at top of medallion -->
+  <circle cx="110" cy="46" r="6" fill="none" stroke="#f6dfa0" stroke-width="3"/>
+
+  <!-- Hanging tassel bells -->
+  <g>
+    <line x1="80" y1="170" x2="72" y2="210" stroke="#c79a3c" stroke-width="2"/>
+    <circle cx="72" cy="216" r="6" fill="url(#medallionGoldV)" stroke="#7a5a12" stroke-width="1"/>
+    <line x1="110" y1="172" x2="110" y2="220" stroke="#c79a3c" stroke-width="2"/>
+    <circle cx="110" cy="226" r="7" fill="url(#medallionGoldV)" stroke="#7a5a12" stroke-width="1"/>
+    <line x1="140" y1="170" x2="148" y2="210" stroke="#c79a3c" stroke-width="2"/>
+    <circle cx="148" cy="216" r="6" fill="url(#medallionGoldV)" stroke="#7a5a12" stroke-width="1"/>
+  </g>
+</svg>
