@@ -15,7 +15,9 @@
 
   const CHARM_PATHS = {
     sakthiman: 'assets/charms/doll.png',
-    suba: 'assets/charms/doll2.png'
+    suba: 'assets/charms/doll2.png',
+    classicMurugan: 'assets/charms/murugan.svg',
+    classicVinayagar: 'assets/charms/vinayagar.svg'
   };
   const NORMAL_CHAIN_LENGTH = 46;
 

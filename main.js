@@ -147,6 +147,18 @@ function buildMenuTemplate() {
       checked: theme === 'suba',
       click: () => setTheme('suba')
     },
+    {
+      label: 'Classic Murugan',
+      type: 'radio',
+      checked: theme === 'classicMurugan',
+      click: () => setTheme('classicMurugan')
+    },
+    {
+      label: 'Classic Vinayagar',
+      type: 'radio',
+      checked: theme === 'classicVinayagar',
+      click: () => setTheme('classicVinayagar')
+    },
     { type: 'separator' },
     {
       label: 'Swing',

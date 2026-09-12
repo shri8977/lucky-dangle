@@ -69,9 +69,7 @@ const store = new Store({
 const legacyThemeMap = {
   murugan: 'sakthiman',
   vinayagar: 'vinayak',
-  vinayak: 'suba',
-  classicMurugan: 'sakthiman',
-  classicVinayagar: 'suba'
+  vinayak: 'suba'
 };
 
 const savedTheme = store.get('theme');
