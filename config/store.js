@@ -15,7 +15,7 @@ const schema = {
     type: 'string',
     enum: [
       'sakthiman',
-      'vinayak',
+      'suba',
       'murugan',
       'vinayagar',
       'classicMurugan',
@@ -69,8 +69,9 @@ const store = new Store({
 const legacyThemeMap = {
   murugan: 'sakthiman',
   vinayagar: 'vinayak',
+  vinayak: 'suba',
   classicMurugan: 'sakthiman',
-  classicVinayagar: 'vinayak'
+  classicVinayagar: 'suba'
 };
 
 const savedTheme = store.get('theme');

@@ -142,10 +142,10 @@ function buildMenuTemplate() {
       click: () => setTheme('sakthiman')
     },
     {
-      label: 'Vinayak',
+      label: 'Suba',
       type: 'radio',
-      checked: theme === 'vinayak',
-      click: () => setTheme('vinayak')
+      checked: theme === 'suba',
+      click: () => setTheme('suba')
     },
     { type: 'separator' },
     {
